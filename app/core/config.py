@@ -12,10 +12,11 @@ class Settings(BaseSettings):
 
     llm_provider: Literal["anthropic", "mock"] = "mock"
     anthropic_api_key: SecretStr | None = None
-    llm_model: str = "claude-haiku-4-5-20251001"
+    llm_model: str = "claude-haiku-4-5"
     llm_temperature: float = 0.0
     llm_timeout_seconds: float = Field(default=30.0, gt=0)
     llm_max_retries: int = Field(default=2, ge=0)
+    mask_sensitive_data: bool = True
     database_path: str = "pitz_pulse.db"
 
     @model_validator(mode="after")
