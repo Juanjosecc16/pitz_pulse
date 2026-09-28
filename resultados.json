@@ -1,0 +1,122 @@
+[
+  {
+    "id": "MSG-01",
+    "categoria": "bug",
+    "prioridad": "alta",
+    "area_sugerida": "backend",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-02",
+    "categoria": "datos",
+    "prioridad": "media",
+    "area_sugerida": "data",
+    "idioma": "pt",
+    "resumen": "Solicitud clasificada como datos con prioridad media (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-03",
+    "categoria": "acceso",
+    "prioridad": "media",
+    "area_sugerida": "devops",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como acceso con prioridad media (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-04",
+    "categoria": "automatizacion",
+    "prioridad": "baja",
+    "area_sugerida": "digital_transformation",
+    "idioma": "pt",
+    "resumen": "Solicitud clasificada como automatizacion con prioridad baja (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-05",
+    "categoria": "bug",
+    "prioridad": "media",
+    "area_sugerida": "backend",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como bug con prioridad media (modo mock, sin IA).",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Puedes darnos más detalle: qué ocurre exactamente, desde cuándo y a quién afecta?"
+  },
+  {
+    "id": "MSG-06",
+    "categoria": "bug",
+    "prioridad": "alta",
+    "area_sugerida": "frontend",
+    "idioma": "pt",
+    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-07",
+    "categoria": "datos",
+    "prioridad": "media",
+    "area_sugerida": "data",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como datos con prioridad media (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-08",
+    "categoria": "bug",
+    "prioridad": "alta",
+    "area_sugerida": "backend",
+    "idioma": "pt",
+    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-09",
+    "categoria": "bug",
+    "prioridad": "media",
+    "area_sugerida": "devops",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como bug con prioridad media (modo mock, sin IA).",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Puedes darnos más detalle: qué ocurre exactamente, desde cuándo y a quién afecta?"
+  },
+  {
+    "id": "MSG-10",
+    "categoria": "automatizacion",
+    "prioridad": "baja",
+    "area_sugerida": "digital_transformation",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como automatizacion con prioridad baja (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-11",
+    "categoria": "consulta",
+    "prioridad": "baja",
+    "area_sugerida": "producto",
+    "idioma": "pt",
+    "resumen": "Solicitud clasificada como consulta con prioridad baja (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  },
+  {
+    "id": "MSG-12",
+    "categoria": "bug",
+    "prioridad": "alta",
+    "area_sugerida": "backend",
+    "idioma": "es",
+    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
+    "requiere_info": false,
+    "pregunta_seguimiento": null
+  }
+]
