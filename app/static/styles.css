@@ -1,35 +1,43 @@
+/* Palette taken from pitz.com.mx: navy #00203F (brand), red #FD3333 (actions), cream #F9F9F4 (background). */
 :root {
-  --background: #f5f6f8;
+  --background: #f9f9f4;
   --surface: #ffffff;
-  --text: #1c2430;
-  --text-muted: #5d6878;
-  --border: #d9dee6;
-  --accent: #0b5cd5;
-  --accent-hover: #094aad;
-  --danger: #b42318;
-  --danger-soft: #fdecea;
+  --text: #171717;
+  --text-muted: #5a6878;
+  --border: #e4e4dc;
+  --brand: #00203f;
+  --brand-contrast: #ffffff;
+  --logo: #fd3333;
+  --accent: #fd3333;
+  --accent-hover: #e02424;
+  --danger: #c81e1e;
+  --danger-soft: #ffe8e8;
   --warning: #8a5a00;
   --warning-soft: #fff4d6;
   --success: #1b7a3d;
   --success-soft: #e5f5ea;
-  --radius: 12px;
+  --radius: 16px;
 }
 
+/* Dark mode keeps the brand: navy surfaces, cream text, same red. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #11151b;
-    --surface: #1a2029;
-    --text: #e8ecf2;
-    --text-muted: #9aa5b5;
-    --border: #2d3643;
-    --accent: #5b9bff;
-    --accent-hover: #7fb1ff;
+    --background: #00152a;
+    --surface: #00203f;
+    --text: #f9f9f4;
+    --text-muted: #9fb1c4;
+    --border: #1b3957;
+    --brand: #f9f9f4;
+    --brand-contrast: #00203f;
+    --logo: #fd3333;
+    --accent: #fd3333;
+    --accent-hover: #ff5252;
     --danger: #ff8a80;
-    --danger-soft: #3a1f1d;
+    --danger-soft: #3d1a1f;
     --warning: #ffcc66;
-    --warning-soft: #3a3020;
+    --warning-soft: #33301f;
     --success: #7ad69a;
-    --success-soft: #1d3326;
+    --success-soft: #133326;
   }
 }
 
@@ -40,8 +48,10 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 16px/1.5 "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
+
+h1, h2, .summary, .request-item-summary { color: var(--brand); }
 
 .container {
   max-width: 640px;
@@ -49,7 +59,9 @@ body {
   padding: 40px 16px;
 }
 
-.page-header h1 { margin: 0 0 4px; font-size: 1.75rem; }
+.brand { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; }
+.brand-logo { height: 40px; width: auto; color: var(--logo); }
+.brand-name { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
 .page-header p { margin: 0 0 24px; color: var(--text-muted); }
 
 .card {
@@ -73,7 +85,7 @@ input, textarea, select {
   font: inherit;
 }
 textarea { resize: vertical; min-height: 140px; }
-input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--brand); outline-offset: 1px; border-color: transparent; }
 
 .form-footer {
   display: flex;
@@ -84,9 +96,9 @@ input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); ou
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px 22px;
   border: none;
-  border-radius: 8px;
+  border-radius: 999px; /* pill buttons, as on pitz.com.mx */
   background: var(--accent);
   color: #fff;
   font: inherit;
@@ -97,8 +109,8 @@ button:hover { background: var(--accent-hover); }
 button:disabled { opacity: 0.6; cursor: wait; }
 button.secondary {
   background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--border);
+  color: var(--brand);
+  border: 1px solid var(--brand);
   margin-top: 24px;
 }
 button.secondary:hover { background: var(--background); }
@@ -153,12 +165,12 @@ button.secondary:hover { background: var(--background); }
   width: 100%;
   padding: 10px 8px;
   background: var(--surface);
-  color: var(--text);
+  color: var(--brand);
   border: 1px solid var(--border);
   font-weight: 600;
 }
 .tab:hover { background: var(--background); }
-.tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-contrast); }
 
 /* Slack panel */
 .coming-soon {

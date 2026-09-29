@@ -1,6 +1,6 @@
 # Pitz Pulse
 
-Triage inteligente de solicitudes internas. Recibe mensajes libres (en español o portugués) que las áreas de Pitz le escriben a Product & Tech y devuelve, para cada uno, una clasificación estructurada: **categoría, prioridad, equipo sugerido, idioma, resumen en español** y, si falta información, **la pregunta que habría que hacerle al solicitante**.
+Triage inteligente de solicitudes internas. Recibe mensajes libres (en español o portugués) que las áreas de Pitz le escriben a Product & Tech y devuelve, para cada uno, una clasificación estructurada con **categoría, prioridad, equipo sugerido, idioma, resumen en español** y, si falta información, **la pregunta que habría que hacerle al solicitante**.
 
 - **Parte 1 · Clasificación con IA:** Claude (`claude-haiku-4-5`, `temperature = 0`) con salida JSON validada. Resultado de los 12 mensajes del Anexo A en `[resultados.json](resultados.json)`.
 - **Parte 2 · Servicio:** API HTTP con `POST /solicitudes` y `GET /solicitudes` (filtros por categoría y prioridad), persistencia en SQLite y una web sencilla.
