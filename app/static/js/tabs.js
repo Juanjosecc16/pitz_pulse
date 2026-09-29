@@ -1,6 +1,6 @@
 // Switches between tab panels. onActivate callbacks run each time their tab is opened.
 export function initTabs(onActivate = {}) {
-  const tabs = document.querySelectorAll('.tab[aria-controls]:not([disabled])');
+  const tabs = document.querySelectorAll(".tab[aria-controls]");
 
   function activate(selectedTab) {
     tabs.forEach((tab) => {

@@ -14,20 +14,15 @@
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Secciones">
-      <div class="tab-slot">
-        <button class="tab" role="tab" id="tab-manual" aria-controls="panel-manual" aria-selected="true">
-          Nueva solicitud
-        </button>
-      </div>
-      <div class="tab-slot">
-        <button class="tab" role="tab" id="tab-slack" aria-disabled="true" disabled>Conectar con Slack</button>
-        <span class="tab-caption">Próximamente</span>
-      </div>
-      <div class="tab-slot">
-        <button class="tab" role="tab" id="tab-list" aria-controls="panel-list" aria-selected="false">
-          Consultar solicitudes
-        </button>
-      </div>
+      <button class="tab" role="tab" id="tab-manual" aria-controls="panel-manual" aria-selected="true">
+        Nueva solicitud
+      </button>
+      <button class="tab" role="tab" id="tab-list" aria-controls="panel-list" aria-selected="false">
+        Consultar solicitudes
+      </button>
+      <button class="tab" role="tab" id="tab-slack" aria-controls="panel-slack" aria-selected="false">
+        Conectar con Slack
+      </button>
     </nav>
 
     <!-- Panel 1: manual request -->
@@ -92,7 +87,7 @@
       </div>
     </section>
 
-    <!-- Panel 3: request list -->
+    <!-- Panel 2: request list -->
     <section id="panel-list" role="tabpanel" aria-labelledby="tab-list" hidden>
       <div class="card">
         <div class="filters">
@@ -107,6 +102,13 @@
         </div>
         <p id="list-status" class="hint list-status" aria-live="polite"></p>
         <ul id="request-list" class="request-list"></ul>
+      </div>
+    </section>
+
+    <!-- Panel 3: Slack integration (not built yet) -->
+    <section id="panel-slack" role="tabpanel" aria-labelledby="tab-slack" hidden>
+      <div class="card coming-soon">
+        <p>Próximamente</p>
       </div>
     </section>
   </main>
