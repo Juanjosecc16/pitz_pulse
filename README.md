@@ -16,15 +16,15 @@ Requisito: **Python 3.11 o superior**.
 
 ```bash
 git clone https://github.com/Juanjosecc16/pitz_pulse.git
-cd pitz_pulse
-python -m venv .venv
 ```
 
-Activar el entorno e instalar dependencias:
+Crear el entorno, activarlo e instalar dependencias:
 
 
 | Windows (PowerShell)              | Linux / macOS                     |
 | --------------------------------- | --------------------------------- |
+| `cd pitz_pulse`                   | `cd pitz_pulse`                   |
+| `python -m venv .venv`            | `python3 -m venv .venv`           |
 | `.venv\Scripts\activate`          | `source .venv/bin/activate`       |
 | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
 | `copy .env.example .env`          | `cp .env.example .env`            |
