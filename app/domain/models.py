@@ -5,6 +5,8 @@ required by the case specification. Models accept both names on input and
 always serialize using the aliases.
 """
 
+from datetime import datetime
+
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from app.domain.enums import Category, Language, Priority, SuggestedArea
@@ -50,6 +52,14 @@ class Classification(BaseModel):
             # A question without a need for info is noise; normalize it instead of failing.
             self.follow_up_question = None
         return self
+
+
+class StoredRequest(Classification):
+    """A classified request together with its original message, as persisted and listed by the API."""
+
+    message: str
+    source_area: str | None = None
+    created_at: datetime
 
 
 class RequestInput(BaseModel):

@@ -22,6 +22,12 @@ class Settings(BaseSettings):
     mask_sensitive_data: bool = True
     database_path: str = "pitz_pulse.db"
 
+    @property
+    def database_file(self) -> Path:
+        """Database path; relative paths are resolved against the project root, not the cwd."""
+        path = Path(self.database_path)
+        return path if path.is_absolute() else PROJECT_ROOT / path
+
     @model_validator(mode="after")
     def require_api_key_for_real_provider(self) -> "Settings":
         if self.llm_provider == "anthropic" and not self.anthropic_api_key:
