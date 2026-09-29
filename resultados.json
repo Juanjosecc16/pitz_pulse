@@ -5,9 +5,9 @@
     "prioridad": "alta",
     "area_sugerida": "backend",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Vendedor de Guadalajara recibe error 500 al subir catálogo en Excel; campaña empieza el lunes.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Nos compartes el nombre del vendedor y el archivo que intentó subir?"
   },
   {
     "id": "MSG-02",
@@ -15,7 +15,7 @@
     "prioridad": "media",
     "area_sugerida": "data",
     "idioma": "pt",
-    "resumen": "Solicitud clasificada como datos con prioridad media (modo mock, sin IA).",
+    "resumen": "Planilla de ventas de agosto por estado con totales y comisiones de Pitz para cierre de mes el viernes.",
     "requiere_info": false,
     "pregunta_seguimiento": null
   },
@@ -25,29 +25,29 @@
     "prioridad": "media",
     "area_sugerida": "devops",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como acceso con prioridad media (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Nuevo miembro de Soporte MX solicita acceso al panel de administración.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Cuál es tu nombre completo y correo corporativo para procesar el acceso?"
   },
   {
     "id": "MSG-04",
     "categoria": "automatizacion",
-    "prioridad": "baja",
+    "prioridad": "media",
     "area_sugerida": "digital_transformation",
     "idioma": "pt",
-    "resumen": "Solicitud clasificada como automatizacion con prioridad baja (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Automatizar copia diaria de pedidos nuevos del panel a planilla y envío por correo a distribuidores.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Cuántos pedidos diarios se copian, qué datos específicos se incluyen y cuáles son los distribuidores que reciben el correo?"
   },
   {
     "id": "MSG-05",
-    "categoria": "bug",
+    "categoria": "consulta",
     "prioridad": "media",
-    "area_sugerida": "backend",
+    "area_sugerida": "devops",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como bug con prioridad media (modo mock, sin IA).",
+    "resumen": "Registros de última campaña no aparecen en HubSpot; duda sobre responsabilidad del problema.",
     "requiere_info": true,
-    "pregunta_seguimiento": "¿Puedes darnos más detalle: qué ocurre exactamente, desde cuándo y a quién afecta?"
+    "pregunta_seguimiento": "¿Cuándo se lanzó la campaña, cuántos registros esperabas ver y qué error o mensaje aparece en HubSpot?"
   },
   {
     "id": "MSG-06",
@@ -55,9 +55,9 @@
     "prioridad": "alta",
     "area_sugerida": "frontend",
     "idioma": "pt",
-    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Botón de finalizar compra desaparece en celular al aplicar cupón; funciona en computadora.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "Qual é o modelo do celular e navegador que o mecânico está usando? Conseguem reproduzir o problema com outro cupom?"
   },
   {
     "id": "MSG-07",
@@ -65,7 +65,7 @@
     "prioridad": "media",
     "area_sugerida": "data",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como datos con prioridad media (modo mock, sin IA).",
+    "resumen": "Solicita cantidad de talleres activos en Monterrey para reunión con distribuidor.",
     "requiere_info": false,
     "pregunta_seguimiento": null
   },
@@ -75,9 +75,9 @@
     "prioridad": "alta",
     "area_sugerida": "backend",
     "idioma": "pt",
-    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Algunas facturas de hoy salen con CNPJ incorrecto del vendedor; dos clientes ya reclamaron.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "Quais são os CNPJs dos vendedores afetados e qual é o CNPJ que está aparecendo incorretamente nas notas fiscais?"
   },
   {
     "id": "MSG-09",
@@ -85,9 +85,9 @@
     "prioridad": "media",
     "area_sugerida": "devops",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como bug con prioridad media (modo mock, sin IA).",
+    "resumen": "La plataforma está lenta.",
     "requiere_info": true,
-    "pregunta_seguimiento": "¿Puedes darnos más detalle: qué ocurre exactamente, desde cuándo y a quién afecta?"
+    "pregunta_seguimiento": "¿Desde cuándo notan la lentitud, en qué región o para qué usuarios específicos, y qué operaciones están más afectadas?"
   },
   {
     "id": "MSG-10",
@@ -95,9 +95,9 @@
     "prioridad": "baja",
     "area_sugerida": "digital_transformation",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como automatizacion con prioridad baja (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Automatizar envío de mensajes a empleados en su aniversario laboral en Pitz.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Por qué canal prefieren enviar el mensaje (email, Slack, SMS) y tienen ya una lista de aniversarios o necesitamos integrar con el sistema de RRHH?"
   },
   {
     "id": "MSG-11",
@@ -105,7 +105,7 @@
     "prioridad": "baja",
     "area_sugerida": "producto",
     "idioma": "pt",
-    "resumen": "Solicitud clasificada como consulta con prioridad baja (modo mock, sin IA).",
+    "resumen": "Comercial pregunta diferencias entre plan básico y plan pro para vendedores.",
     "requiere_info": false,
     "pregunta_seguimiento": null
   },
@@ -115,8 +115,8 @@
     "prioridad": "alta",
     "area_sugerida": "backend",
     "idioma": "es",
-    "resumen": "Solicitud clasificada como bug con prioridad alta (modo mock, sin IA).",
-    "requiere_info": false,
-    "pregunta_seguimiento": null
+    "resumen": "Distribuidor pagó dos veces el mismo pedido; tres casos similares este mes, requiere reembolso.",
+    "requiere_info": true,
+    "pregunta_seguimiento": "¿Cuáles son los IDs de los pedidos duplicados y las fechas en que ocurrieron los pagos?"
   }
 ]

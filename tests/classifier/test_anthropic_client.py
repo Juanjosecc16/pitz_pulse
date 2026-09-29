@@ -1,3 +1,4 @@
+import inspect
 from types import SimpleNamespace
 
 import anthropic
@@ -30,9 +31,12 @@ def client() -> AnthropicClient:
 
 
 def stub_create(monkeypatch, client: AnthropicClient, result) -> dict:
+    """Replace messages.create, rejecting any argument the real SDK signature would reject."""
     captured: dict = {}
+    real_signature = inspect.signature(client._client.messages.create)
 
     def create(**kwargs):
+        real_signature.bind(**kwargs)
         captured.update(kwargs)
         if isinstance(result, Exception):
             raise result
@@ -46,7 +50,7 @@ def test_sends_temperature_schema_and_prompts(monkeypatch, client):
     captured = stub_create(monkeypatch, client, fake_response())
 
     assert client.complete(build_prompt("Hola")) == '{"ok": true}'
-    assert captured["temperature"] == 0.0
+    assert captured["extra_body"] == {"temperature": 0.0}
     assert captured["model"] == "claude-haiku-4-5"
     assert captured["output_config"]["format"]["type"] == "json_schema"
     assert "<mensaje>" in captured["messages"][0]["content"]

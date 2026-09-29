@@ -47,7 +47,9 @@ def test_detects_portuguese_and_summarizes_in_spanish(service):
 
     assert classification.category is Category.DATA
     assert classification.language is Language.PORTUGUESE
-    assert "planilha" not in classification.summary.lower()
+    summary = classification.summary.lower()
+    untranslated = [word for word in ("planilha", "vendas", "fechamento", "comissão", "sexta") if word in summary]
+    assert not untranslated, f"summary not fully translated to Spanish: {classification.summary!r}"
 
 
 def test_asks_follow_up_for_vague_message(service):

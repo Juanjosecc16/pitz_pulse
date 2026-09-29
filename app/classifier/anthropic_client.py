@@ -27,10 +27,12 @@ class AnthropicClient(LLMClient):
             response = self._client.messages.create(
                 model=self._model,
                 max_tokens=MAX_OUTPUT_TOKENS,
-                temperature=self._temperature,
                 system=prompt.system,
                 messages=[{"role": "user", "content": prompt.user}],
                 output_config={"format": {"type": "json_schema", "schema": CLASSIFICATION_OUTPUT_SCHEMA}},
+                # SDK 1.x dropped the sampling keyword arguments because newer models reject them;
+                # Haiku 4.5 still accepts temperature, so it is sent as a raw body field.
+                extra_body={"temperature": self._temperature},
             )
         except anthropic.APITimeoutError as error:
             raise LLMTimeoutError("the model did not answer in time") from error

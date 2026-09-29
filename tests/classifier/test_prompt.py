@@ -3,12 +3,14 @@ import pytest
 from app.classifier.prompt import (
     AREA_DESCRIPTIONS,
     CATEGORY_DESCRIPTIONS,
+    EXAMPLES,
     PRIORITY_DESCRIPTIONS,
     SYSTEM_PROMPT,
     build_prompt,
 )
 from app.classifier.schema import CLASSIFICATION_OUTPUT_SCHEMA
-from app.domain.enums import Category, Priority, SuggestedArea
+from app.domain.enums import Category, Language, Priority, SuggestedArea
+from app.domain.models import Classification
 
 
 @pytest.mark.parametrize(
@@ -19,6 +21,17 @@ def test_every_allowed_value_is_described_in_system_prompt(enum_class, descripti
     assert set(descriptions) == set(enum_class)
     for member in enum_class:
         assert f"- {member.value}:" in SYSTEM_PROMPT
+
+
+@pytest.mark.parametrize(("source_area", "message", "output"), EXAMPLES)
+def test_prompt_examples_pass_our_own_validation(source_area, message, output):
+    Classification.model_validate({**output, "id": "EXAMPLE"})
+
+    assert message in SYSTEM_PROMPT
+
+
+def test_prompt_includes_a_portuguese_example():
+    assert any(output["idioma"] == Language.PORTUGUESE.value for _, _, output in EXAMPLES)
 
 
 def test_schema_enums_match_domain_enums():
