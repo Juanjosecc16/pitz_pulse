@@ -43,6 +43,10 @@ uvicorn app.main:app --reload
 
 
 
+## Enlace compartido de conversación para el Case
+
+**Web:** [Click aquí😁](https://claude.ai/artifact/F9WjY15jWwV3q8MVGr1cBG)
+
 ## Configuración (`.env`)
 
 
