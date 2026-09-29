@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pitz Pulse</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Pitz Pulse</h1>
+      <p>Cuéntanos qué necesitas y lo enviamos al equipo correcto.</p>
+    </header>
+
+    <section id="form-view" class="card">
+      <form id="request-form" novalidate>
+        <label for="source-area">¿Desde qué área escribes? <span class="optional">(opcional)</span></label>
+        <input id="source-area" name="source_area" list="area-options" maxlength="100"
+               placeholder="Ej.: Soporte MX" autocomplete="off">
+        <datalist id="area-options">
+          <option value="Comercial MX"></option>
+          <option value="Comercial BR"></option>
+          <option value="Operaciones MX"></option>
+          <option value="Operações BR"></option>
+          <option value="Soporte MX"></option>
+          <option value="Suporte BR"></option>
+          <option value="Finanzas MX"></option>
+          <option value="Financeiro BR"></option>
+          <option value="Marketing"></option>
+          <option value="People"></option>
+        </datalist>
+
+        <label for="message">¿Qué necesitas?</label>
+        <textarea id="message" name="message" rows="6" maxlength="4000" required
+                  placeholder="Describe el problema o el pedido con el mayor detalle posible. Puedes escribir en español o portugués."></textarea>
+
+        <div class="form-footer">
+          <span id="char-count" class="hint">0 / 4000</span>
+          <button id="submit-button" type="submit">Enviar solicitud</button>
+        </div>
+        <p id="loading-hint" class="hint loading-hint" hidden>Estamos analizando tu mensaje; puede tardar unos segundos.</p>
+        <p id="form-error" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="result-view" class="card" hidden aria-live="polite" tabindex="-1">
+      <p class="eyebrow">Solicitud recibida · <span id="result-id"></span></p>
+      <h2 id="result-summary" class="summary"></h2>
+
+      <dl class="details">
+        <div><dt>Tipo</dt><dd id="result-category"></dd></div>
+        <div><dt>Prioridad</dt><dd><span id="result-priority" class="badge"></span></dd></div>
+        <div><dt>Equipo asignado</dt><dd id="result-area"></dd></div>
+        <div><dt>Idioma</dt><dd id="result-language"></dd></div>
+      </dl>
+
+      <div id="follow-up" class="notice notice-warning" hidden>
+        <strong>Necesitamos un poco más de información</strong>
+        <p id="follow-up-question"></p>
+      </div>
+      <div id="ready-note" class="notice notice-success" hidden>
+        <strong>Todo listo</strong>
+        <p>Tu solicitud tiene la información necesaria. El equipo la atenderá según su prioridad.</p>
+      </div>
+
+      <details class="original-message">
+        <summary>Ver el mensaje enviado</summary>
+        <p id="result-message"></p>
+      </details>
+
+      <button id="new-request-button" type="button" class="secondary">Enviar otra solicitud</button>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

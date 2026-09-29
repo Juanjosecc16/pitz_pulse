@@ -14,7 +14,8 @@ venv/
 *.db
 *.sqlite3
 
-# Editors / OS
+# Editors / OS / local tooling
+.claude/
 .vscode/
 .idea/
 .DS_Store
