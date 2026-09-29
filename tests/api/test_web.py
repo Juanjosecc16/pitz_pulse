@@ -17,6 +17,18 @@ def test_root_serves_the_web_page(client):
     assert 'id="request-form"' in response.text
 
 
-@pytest.mark.parametrize("asset", ["/static/app.js", "/static/styles.css"])
+@pytest.mark.parametrize(
+    "asset",
+    [
+        "/static/styles.css",
+        "/static/js/main.js",
+        "/static/js/api.js",
+        "/static/js/labels.js",
+        "/static/js/render.js",
+        "/static/js/form-view.js",
+        "/static/js/list-view.js",
+        "/static/js/tabs.js",
+    ],
+)
 def test_serves_static_assets(client, asset):
     assert client.get(asset).status_code == 200
